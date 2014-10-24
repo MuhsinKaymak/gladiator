@@ -1,0 +1,285 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	text-align:center;
+	background-image:url('../graphics/skybox.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+.title{
+	height:150px;
+}
+
+.menu{
+	height:50px;
+	width:100%;
+	
+	display:table;
+	
+}
+
+.menu>img{
+	display:table-cell;
+	height:100%;
+	width:100px;
+}
+
+.menu.background{
+	background-image:url('../graphics/marble_menu.png');
+	background-color:green;
+	background-repeat:repeat-x;
+	background-size:auto 100%;
+	
+	display:table-cell;
+	width:100%;
+}
+
+.menu>button{
+	border:none;
+	height:45px;
+	position:relative;
+	top:-4px;
+}
+.menu>button:hover{
+	position:relative;
+	top:-3px;
+}
+
+.menu>button#btnProfile{
+	background-image:url('../graphics/buttons/btn_profile.png'); width:112px;
+}.menu>button:hover#btnProfile{
+	background-image:url('../graphics/buttons/btn_profile_h.png');
+}.menu>button#btnMarket{
+	background-image:url('../graphics/buttons/btn_market.png'); width:130px;
+}.menu>button:hover#btnMarket{
+	background-image:url('../graphics/buttons/btn_market_h.png');
+}.menu>button#btnArena{
+	background-image:url('../graphics/buttons/btn_arena.png'); width:112px;
+}.menu>button:hover#btnArena{
+	background-image:url('../graphics/buttons/btn_arena_h.png');
+}.menu>button#btnHospital{
+	background-image:url('../graphics/buttons/btn_hospital.png'); width:140px;
+}.menu>button:hover#btnHospital{
+	background-image:url('../graphics/buttons/btn_hospital_h.png');
+}
+
+input[type=submit]#btnLogin {
+border:none;
+	height:45px;
+	position:relative;
+	top:-8px;
+	background-image:url('../graphics/buttons/btn_Login.png'); width:112px;
+}input[type=submit]:hover#btnLogin {
+	position:relative;
+	top:-7px;
+	background-image:url('../graphics/buttons/btn_Login_h.png');
+}
+
+input[type=text]#login{
+	height:30px;
+	position:relative;
+	top:-25px;
+	
+	background-image:url('../graphics/marble_background.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}input[type=password]#login{
+	height:30px;
+	position:relative;
+	top:-25px;
+	
+	background-image:url('../graphics/marble_background.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	
+}
+input[type=text]#register{
+	height:30px;
+	width:250px;
+	
+	background-image:url('../graphics/inner_back_w.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	border-color:#4d0000;
+}input[type=password]#register{
+	height:30px;
+	width:250px;
+	
+	background-image:url('../graphics/inner_back_w.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	border-color:#4d0000;
+}input[type=text]#register{
+	height:30px;
+	width:250px;
+	
+	background-image:url('../graphics/inner_back_w.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	border-color:#4d0000;
+}
+
+.btnRegister {
+	height:45px;
+	width:250px;
+	background-image:url('../graphics/inner_back.png'); width:255px;
+	
+	
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border.png) 10 repeat;
+	border-image: url(../graphics/inner_border.png) 10 fill repeat;
+}
+.btnRegister:hover {
+	position:relative;
+	top:-1px;
+	
+	-moz-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	border-image: url(../graphics/inner_border_in.png) 10 fill repeat;
+}
+
+.menu.border
+{
+	border-style: solid;
+border-width: 2px;
+-moz-border-image: url(../graphics/marble_border.png) 2 repeat;
+-webkit-border-image: url(../graphics/marble_border.png) 2 repeat;
+-o-border-image: url(../graphics/marble_border.png) 2 repeat;
+border-image: url(../graphics/marble_border.png) 2 fill;
+}
+
+#frame{
+	min-height:300px;
+	width:100%;
+	display:table;
+}
+
+#inner-frame{
+	height:100%;
+	background-color:green;
+	display:table-cell;
+}
+
+.player-stats{
+	text-align:center;
+	background-image:url('../graphics/inner_back.png');
+	background-color:green;
+	background-repeat:repeat-x;
+	background-size:auto 100%;
+	height:25px;
+	
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border.png) 10 repeat;
+	border-image: url(../graphics/inner_border.png) 10 fill repeat;
+}
+.player-stats>#stats
+{
+	position:relative;
+	top:2px;
+}
+
+.stats-cell{
+	position:relative;
+	top:-3px;
+	
+	
+	width:500px;
+	text-align:right;
+}
+.stats-cell#name{
+	width:25px;
+	text-align:left;
+}
+.stats-cell#stat{
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+	border-image: url(../graphics/inner_border_in.png) 10 fill repeat;
+}
+
+.inner{
+	min-height:687px;
+	padding:25px;
+	background-image:url('../graphics/inner_back.png');
+	
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border.png) 10 repeat;
+	border-image: url(../graphics/inner_border.png) 10 fill repeat;
+}
+
+.banner{
+	min-height:50px;
+	background-image:url('../graphics/inner_back_b.png');
+	
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border_.png) 10 repeat;
+	border-image: url(../graphics/inner_border_b.png) 10 fill repeat;
+}
+.banner
+
+.window{
+	min-height:100px;
+	padding:5px;
+	background-image:url('../graphics/inner_back_w.png');
+	
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border.png) 10 repeat;
+	border-image: url(../graphics/inner_border.png) 10 fill repeat;
+}
+
+.copyright{
+	text-align:center;
+	background-image:url('../graphics/marble_menu.png');
+	background-color:green;
+	background-repeat:repeat-x;
+	background-size:auto 100%;
+	height:25px;
+}
+
+.pillar{
+	width:160px;
+	height:100%;
+	display:table-cell;
+}
+
+.pillar.left{
+	background-image:url('../graphics/greek_pillar_l.png');
+}
+
+.pillar.right{
+	background-image:url('../graphics/greek_pillar_r.png');
+}
+
+.chain-divider{
+	background-image:url('../graphics/chain_divider.png');
+	background-position:center;
+}
+.chain-divider.upper{
+	height:20px;
+}
+.chain-divider.lower{
+	height:15px;
+}
