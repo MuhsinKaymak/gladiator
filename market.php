@@ -51,8 +51,55 @@
 <div class="banner">
     <img alt="" src="graphics/banners/banner_market.png"/>
 </div>
+<br>
 
-inner
+    <table>
+        <tr>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+        </tr>
+        <tr>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+        </tr>
+        <tr>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+        </tr>
+        <tr>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+            <td class="market-box" style="padding:70px"></td>
+        </tr>
+    </table>
+
 </div>
 
 <div class="chain-divider lower"></div>
