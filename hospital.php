@@ -51,8 +51,16 @@
 <div class="banner">
     <img alt="" src="graphics/banners/banner_hospital.png"/>
 </div>
+<br>
 
-inner
+<div align="center" style="color:white;">
+
+    <h1>You have been injured!</h1>
+    <h2>Please wait:</h2>
+    <div id="timer"><h4>00:15:24</h4></div>
+    
+</div>
+
 </div>
 
 <div class="chain-divider lower"></div>
@@ -83,6 +91,8 @@ copyright &copy 2014-2015
     document.getElementById("btnHospital").onclick = function () {
         location.href = "hospital.php";
     };
+    
+    
 </script>
 </body>
 </html>
