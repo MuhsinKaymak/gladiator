@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Gladiator</title>
+<title>Profile | Gladiators</title>
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -49,10 +49,107 @@
 <div style="height:50px"></div>
 
 <div class="banner">
-<h2>TestGladiator1</h2>
+    <img alt="" src="graphics/banners/banner_profile.png"/>
+</div>
+<div  style="width:100%;display:table;">
+    
+    <div style="display:cell;width:50px;float:left;">
+    <img alt="" src="graphics/icons/ico_gold_m.png"/> 
+    </div>
+    <div class="gold-text" style="display:cell;width:100px;float:left">
+    10000
+    </div>
+    
 </div>
 
-inner
+<div style="display:table;padding:10px;width:100%;">
+    
+<div style="display:table-cell;float:left;width:200px;">
+
+<div class="banner" style="width:300px;">
+<img alt="" src="graphics/banners/banner_stats.png"/>
+</div>
+<div class="box" style="width:290px;padding-left:2px;">
+<table align="center">
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;padding-right:50px">Level</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">10</th>
+</tr>
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">exp</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">23600</th>
+</tr>
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;"><br></th>
+</tr>
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Health</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">100</th>
+</tr>
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Attack</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">50</th>
+</tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Defence</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">50</th>
+<tr>
+<th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Energy</th>
+<th id="stat" class="stats-cell" style="font-size:25px;">500</th>
+</tr>
+</table>
+</div>
+    
+<br>    
+
+<div class="banner" style="width:300px;">
+    <img alt="" src="graphics/banners/banner_battle_log.png"/>
+</div>
+
+<div class="box" style="width:290px;">
+
+<button class="log-btn">125125: gold:45, exp:50, date:10.02.14</button>    
+<button class="log-btn">2121: gold:40, exp:120, date:11.04.14</button> 
+<button class="log-btn">6212: gold:55, exp:10, date:19.06.14</button> 
+<button class="log-btn">87623: gold:100, exp:96, date:10.07.14</button> 
+<button class="log-btn">16252: gold:204, exp:229, date:15.07.14</button> 
+
+</div>    
+    
+    
+</div>
+
+<div style="display:table-cell;width:500px;padding-right:15px;float:right;">
+    
+<div class="banner" style="width:500px">
+    <img alt="" src="graphics/banners/banner_equipment.png"/>
+</div>
+    
+<div class="box" style="width:485px">
+    
+    <table>
+        <tr>
+            <td class="equip-box" style="background-color:green;padding:55px">gloves</td>
+            <td class="equip-box" style="background-color:green;padding:55px">helmet</td>
+            <td  style="padding:55px"></td>
+        </tr>
+        <tr>
+            <td class="equip-box" style="background-color:green;padding:55px">weapon</td>
+            <td class="equip-box" style="background-color:green;padding:55px">armour</td>
+            <td class="equip-box" style="background-color:green;padding:55px">shield</td>
+        </tr>
+        <tr>
+            <td style="padding:55px"></td>
+            <td class="equip-box" style="background-color:green;padding:55px">boots</td>
+            <td style="padding:55px"></td>
+        </tr>
+    </table>
+
+</div>
+    
+</div>
+
+</div>
+
 </div>
 
 <div class="chain-divider lower"></div>

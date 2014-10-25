@@ -53,6 +53,7 @@
 </div>
 
 <div style="display:table;padding:25px;">
+    
 <div style="display:table-cell">
 <h3>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare nisi nec dolor aliquam posuere. Praesent mi mi, lobortis id mattis et, imperdiet ut nisi. Ut sit amet cursus dui. Etiam eu turpis quis magna aliquet accumsan ut quis ante. Fusce at commodo tortor, vel commodo erat. Morbi eleifend feugiat ligula a blandit. Phasellus dignissim egestas luctus. Phasellus non tellus faucibus est egestas tristique et vitae sem. Nunc turpis lectus, vulputate nec tortor ut, mollis ornare lorem. Phasellus lacinia sapien et tellus vestibulum, at dictum erat lacinia. Sed at ultrices nisi, eu malesuada sem. Nullam bibendum dignissim massa, vitae scelerisque elit elementum eget. Nam tempus, ante eget venenatis condimentum, sem augue varius lorem, vitae tincidunt magna diam nec nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -60,11 +61,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare nisi nec
 </div>
 
 <div style="display:table-cell;width:500px;padding-left:25px">
+    
 <div class="banner" style="width:270px">
 <img alt="" src="graphics/banners/banner_register.png"/>
 </div>
-<div class="window" style="width:260px">
-
+    
+    <div class="box" style="width:254px">
+    
 <form>
 <input id="register" type="text" placeholder="username">
 <input id="register" type="password" placeholder="password">
@@ -74,6 +77,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare nisi nec
 </form>
 
 </div>
+    
 </div>
 
 </div>

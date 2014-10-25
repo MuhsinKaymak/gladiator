@@ -235,25 +235,23 @@ border-image: url(../graphics/marble_border.png) 2 fill;
 	-o-border-image: url(../graphics/inner_border_.png) 10 repeat;
 	border-image: url(../graphics/inner_border_b.png) 10 fill repeat;
 }
-.banner
 
-.window{
+.box{
 	min-height:100px;
-	padding:5px;
 	background-image:url('../graphics/inner_back_w.png');
+        padding:8px;
 	
 	border-style: solid;
 	border-width: 2px;
-	-moz-border-image: url(../graphics/inner_border.png) 10 repeat;
-	-webkit-border-image: url(../graphics/inner_border.png) 10 repeat;
-	-o-border-image: url(../graphics/inner_border.png) 10 repeat;
-	border-image: url(../graphics/inner_border.png) 10 fill repeat;
+	-moz-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+	-webkit-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+	-o-border-image: url(../graphics/inner_border_.png) 10 repeat;
+	border-image: url(../graphics/inner_border_b.png) 10 fill repeat;
 }
 
 .copyright{
 	text-align:center;
 	background-image:url('../graphics/marble_menu.png');
-	background-color:green;
 	background-repeat:repeat-x;
 	background-size:auto 100%;
 	height:25px;
@@ -282,4 +280,47 @@ border-image: url(../graphics/marble_border.png) 2 fill;
 }
 .chain-divider.lower{
 	height:15px;
+}
+
+.gold-text{
+    color:gold;
+    font-size:50px;
+}
+
+.log-btn{
+    background-image:url('../graphics/inner_back_b.png');
+    font-size:15px;
+    width:100%;
+    text-align:left;
+    color:grey;
+    
+    border-style: solid;
+    border-width: 2px;
+    -moz-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+    -webkit-border-image: url(../graphics/inner_border_b.png) 10 repeat;
+    -o-border-image: url(../graphics/inner_border_.png) 10 repeat;
+    border-image: url(../graphics/inner_border_b.png) 10 fill repeat;
+}
+
+.log-btn:hover {
+    position:relative;
+    top:-1px;
+
+    -moz-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    -webkit-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    -o-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    border-image: url(../graphics/inner_border_in.png) 10 fill repeat;
+}
+
+.equip-box{
+    min-height:100px;
+    background-image:url('../graphics/inner_back.png');
+    padding:8px;
+
+    border-style: solid;
+    border-width: 2px;
+    -moz-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    -webkit-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    -o-border-image: url(../graphics/inner_border_in.png) 10 repeat;
+    border-image: url(../graphics/inner_border_in.png) 10 fill repeat;
 }
