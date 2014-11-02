@@ -1,3 +1,29 @@
+<?php 
+require_once('classes/Provider.php');
+
+session_start();
+
+if(isset($_SESSION["playerID"]) && $_SESSION["playerID"] > -1)
+{
+    header("Location: profile.php");
+}
+
+if(isset($_POST['btnLogin']))
+{
+    $sql = new Provider();
+    
+    $id = -1;
+    $id = $sql->checkLogin($_POST['username'], $_POST['password']);
+    
+    if($id != -1)
+    {
+        $_SESSION["playerID"] = "$id";
+        
+        header("Location: profile.php");
+    }
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +33,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-
+    
 <div align="center">
 
 <div id="title" class="title">

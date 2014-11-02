@@ -1,3 +1,30 @@
+<?php
+require_once('classes/Provider.php');
+
+session_start();
+if(isset($_SESSION["playerID"]))
+{
+    if(!$_SESSION["username"] || !$_SESSION["health"] || !$_SESSION["attack"] || !$_SESSION["defence"] || !$_SESSION["gold"] || !$_SESSION["energy"] || !$_SESSION["levelID"] || !$_SESSION["xp"])
+    {
+        $sql = new Provider();
+        $stats = $sql->getStats($_SESSION["playerID"]);
+
+        $_SESSION["username"] = $stats['username'];
+        $_SESSION["health"] = $stats['health'];
+        $_SESSION["attack"] = $stats['attack'];
+        $_SESSION["defence"] = $stats['defence'];
+        $_SESSION["gold"] = $stats['gold'];
+        $_SESSION["energy"] = $stats['energy'];
+        $_SESSION["levelID"] = $stats['levelID'];
+        $_SESSION["xp"] = $stats['xp'];
+    }
+}
+else
+{
+    header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -57,7 +84,7 @@
     <img alt="" src="graphics/icons/ico_gold_m.png"/> 
     </div>
     <div class="gold-text" style="display:cell;width:100px;float:left">
-    10000
+    <?php echo (isset($_SESSION["gold"]) ? $_SESSION["gold"] : "0") ?>
     </div>
     
 </div>
@@ -73,28 +100,28 @@
 <table align="center">
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;padding-right:50px">Level</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">10</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["levelID"]) ? $_SESSION["levelID"] : "0") ?></th>
 </tr>
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">exp</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">23600</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["xp"]) ? $_SESSION["xp"] : "0") ?></th>
 </tr>
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;"><br></th>
 </tr>
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Health</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">100</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["health"]) ? $_SESSION["health"] : "0") ?></th>
 </tr>
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Attack</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">50</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["attack"]) ? $_SESSION["attack"] : "0") ?></th>
 </tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Defence</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">50</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["defence"]) ? $_SESSION["defence"] : "0") ?></th>
 <tr>
 <th style="width:5px;position:relative;top:-2px;font-size:25px;text-align:left;">Energy</th>
-<th id="stat" class="stats-cell" style="font-size:25px;">500</th>
+<th id="stat" class="stats-cell" style="font-size:25px;"><?php echo (isset($_SESSION["energy"]) ? $_SESSION["energy"] : "0") ?></th>
 </tr>
 </table>
 </div>
