@@ -1,3 +1,8 @@
+<?php 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <table align="center">
 <tr>
 <th id="name" class="stats-cell"><?php echo (isset($_SESSION["username"]) ? $_SESSION["username"] : "_ERROR") ?></th>

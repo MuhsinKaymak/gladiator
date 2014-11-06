@@ -4,7 +4,7 @@ require_once('classes/Provider.php');
 session_start();
 if(isset($_SESSION["playerID"]))
 {
-    if(!$_SESSION["username"] || !$_SESSION["health"] || !$_SESSION["attack"] || !$_SESSION["defence"] || !$_SESSION["gold"] || !$_SESSION["energy"] || !$_SESSION["levelID"] || !$_SESSION["xp"])
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["health"]) || !isset($_SESSION["attack"]) || !isset($_SESSION["defence"]) || !isset($_SESSION["gold"]) || !isset($_SESSION["energy"]) || !isset($_SESSION["levelID"]) || !isset($_SESSION["xp"]))
     {
         $sql = new Provider();
         $stats = $sql->getStats($_SESSION["playerID"]);
