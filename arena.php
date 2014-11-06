@@ -18,6 +18,11 @@ if(isset($_SESSION["playerID"]))
         $_SESSION["levelID"] = $stats['levelID'];
         $_SESSION["xp"] = $stats['xp'];
     }
+    
+    if($_SESSION['health'] < 1)
+    {
+        header("Location: hospital.php");
+    }
 }
 else
 {

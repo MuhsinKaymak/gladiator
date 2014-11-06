@@ -126,13 +126,82 @@ class Provider{
         $query = "UPDATE [dbo].[playerStats] SET [health] = 0 WHERE [playerID] = ".$loserID.";";
         sqlsrv_query($this->conn, $query);
         
-        $date = date('Y-m-d H:i:s', strtotime('+1 hours'));
+        $date = date('Y-m-d H:i:s', strtotime('+30 seconds'));
         $query = "INSERT INTO [dbo].[hospital] ([playerID],[releaseTime]) VALUES (".$loserID.",'".$date."');";
         sqlsrv_query($this->conn, $query);
         
         //giv reward to winner
         $query = "UPDATE [dbo].[playerStats] SET [gold] = [gold]+".$goldReward.", [xp] = [xp]+".$XPReward." WHERE [playerID] = ".$winnerID.";";
         sqlsrv_query($this->conn, $query);
+    }
+    
+    public function getSecondsToRelease($playerID)
+    {
+        $currentDate = date('Y-m-d H:i:s');
+        $releaseDate;
+        
+        $query = "SELECT [releaseTime] FROM [dbo].[hospital] WHERE [playerID] = '".$playerID."'";
+
+        $result = sqlsrv_query($this->conn, $query);
+        
+        $row = sqlsrv_fetch_object($result);
+        if($row)
+        {
+            $releaseDate = $row->releaseTime;
+        }
+        
+        if($releaseDate == NULL)
+        {
+            return 99999;
+        }
+        else if($currentDate > $releaseDate->format('Y-m-d H:i:s'))
+        {
+            return 0;
+        }
+        
+        /*$date1 = new DateTime($currentDate);
+        $date2 = new DateTime($releaseDate->format('Y-m-d H:i:s'));
+        
+        $interval = 22222;
+        $interval = $date1->diff($date2);
+        return $interval->s;
+        */
+        $datetime1 = date_create("".$currentDate);
+        $datetime2 = date_create("".$releaseDate->format('Y-m-d H:i:s'));
+
+        $interval = date_diff($datetime1, $datetime2);
+
+        $hours = $interval->format("%h");
+        $mins = $interval->format("%i") + ($hours*60);
+        $secs = $interval->format("%s") + ($mins*60);
+        return $secs;
+    }
+    
+    public function refillHealth($playerID)
+    {
+        $query = "DELETE FROM [dbo].[hospital] WHERE [playerID] = ".$playerID.";";
+        sqlsrv_query($this->conn, $query);
+        
+        $query = "SELECT [health] FROM [dbo].[playerStats] WHERE [playerID] = '".$playerID."'";
+
+        $result = sqlsrv_query($this->conn, $query);
+        
+        $row = sqlsrv_fetch_object($result);
+        if($row)
+        {
+            return $row->health;
+        }
+    }
+    
+    public function register($username,$pass, $mail)
+    {
+        try{
+            $query = "INSERT INTO [dbo].[players] ([username],[password],[email]) VALUES ('".$username."','".$pass."','".$mail."');";
+            sqlsrv_query($this->conn, $query);
+            return true;
+        } catch (Exception $ex) {
+            return false;
+        }
     }
 }
 ?>

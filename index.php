@@ -22,6 +22,13 @@ if(isset($_POST['btnLogin']))
         header("Location: profile.php");
     }
 }
+
+if(isset($_POST['btnRegister']))
+{
+    $sql = new Provider();
+    
+    echo "registered = ".$sql->register($_POST['regUsername'], $_POST['regPass'], $_POST['regMail']);
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -94,12 +101,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare nisi nec
     
     <div class="box" style="width:254px">
     
-<form>
-<input id="register" type="text" placeholder="username">
-<input id="register" type="password" placeholder="password">
-<input id="register" type="password" placeholder="password again">
-<input id="register" type="text" placeholder="E-mail"><br><br>
-<button class="btnRegister" type="submit"><img alt="" src="graphics/banners/banner_register.png"></button>
+<form action="index.php" method="post">
+<input id="register" name="regUsername" type="text" placeholder="username">
+<input id="register" name="regPass" type="password" placeholder="password">
+<input id="register" name="regPass2" type="password" placeholder="password again">
+<input id="register" name="regMail" type="text" placeholder="E-mail"><br><br>
+<button name="btnRegister" class="btnRegister" type="submit"><img alt="" src="graphics/banners/banner_register.png"></button>
 </form>
 
 </div>

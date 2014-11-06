@@ -10,6 +10,15 @@ $sql = new Provider();
 
 session_start();
 
+if(!isset($_SESSION["playerID"]))
+{
+    header("Location: index.php");
+}
+else if($_SESSION['health'] < 1)
+{
+    header("Location: hospital.php");
+}
+
 $playerUsername = $_SESSION["username"];
 $playerLevel = $_SESSION["levelID"];
 $playerHP = $_SESSION["health"];
@@ -74,11 +83,15 @@ if($playerHP > $enemyHP)
 {
     $battleStr .=$playerUsername;
     $sql->saveBattleResults($_SESSION['playerID'], $_POST['o_id'], $_POST['o_level']*20, $_POST['o_level']*50);
+    
+    $_SESSION['xp'] = $_SESSION['xp'] + ($_POST['o_level']*20);
+    $_SESSION["gold"] = $_SESSION["gold"] + ($_POST['o_level']*50);
 }
 else if($playerHP < $enemyHP)
 {
     $battleStr .=$enemyUsername;
     $sql->saveBattleResults($_POST['o_id'],$_SESSION['playerID'], $_SESSION['levelID']*20, $_SESSION['levelID']*50);
+    $_SESSION['health'] = 0;
 }
 else 
 {
